@@ -1,3 +1,5 @@
+export const siteUrl = 'https://bradleypaul.github.io/portfolio'
+
 export const meta = {
   name: 'Paul Bradley',
   firstName: 'Paul',
@@ -11,6 +13,8 @@ export const meta = {
   companiesCount: '6',
   education: 'Harding University — B.A. Computer Science, 2015',
 }
+
+export const siteDescription = `${meta.name} is a ${meta.title} in ${meta.location}. ${meta.yearsExperience} years with React, TypeScript, GraphQL, and Node — open to ${meta.availability} roles.`
 
 export interface Role {
   company: string
@@ -113,7 +117,7 @@ export const projects: Project[] = [
     description:
       'MUI billing card composed from Card primitives and React context instead of prop drilling. Keyboard-submittable, with a write-up of tradeoffs and where AI helped.',
     tech: ['React', 'TypeScript', 'MUI'],
-    url: 'https://github.com/paulbradleycodes-cyber/plan-selection-card',
+    url: 'https://github.com/bradleypaul/plan-selection-card',
   },
 ]
 

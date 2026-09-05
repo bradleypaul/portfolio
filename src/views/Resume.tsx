@@ -48,7 +48,15 @@ export function ResumeView() {
               <div className={styles.expCompany}>{project.tag}</div>
             </div>
             <div>
-              <div className={styles.expRole}>{project.name}</div>
+              <div className={styles.expRole}>
+                {project.url ? (
+                  <a href={project.url} target="_blank" rel="noreferrer">
+                    {project.name}
+                  </a>
+                ) : (
+                  project.name
+                )}
+              </div>
               <div className={styles.expDesc}>{project.description}</div>
             </div>
           </div>

@@ -77,6 +77,9 @@ function ProjectCardBody({
           </span>
         ))}
       </div>
+      {project.url ? (
+        <span className={styles.projectLink}>View on GitHub →</span>
+      ) : null}
     </>
   )
 }
