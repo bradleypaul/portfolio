@@ -1,0 +1,87 @@
+.page {
+  padding: 5rem 3rem;
+  animation: fadeUp 0.25s ease forwards;
+}
+
+.inner {
+  max-width: 560px;
+}
+
+.heading {
+  font-family: var(--font-serif), serif;
+  font-size: 40px;
+  color: var(--text-primary);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 0.5px solid var(--border);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:first-child {
+  border-top: 0.5px solid var(--border);
+}
+
+.link:hover .linkValue {
+  color: var(--accent);
+}
+
+.linkLabel {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  min-width: 80px;
+}
+
+.linkValue {
+  font-size: 15px;
+  color: var(--text-primary);
+  transition: color 0.2s;
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.linkArrow {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 800px) {
+  .page {
+    padding: 3rem 1.5rem;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .linkValue {
+    margin-left: 1rem;
+    font-size: 14px;
+  }
+}

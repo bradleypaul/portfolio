@@ -1,0 +1,154 @@
+.page {
+  padding: 5rem 3rem;
+  animation: fadeUp 0.25s ease forwards;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif), serif;
+  font-size: 28px;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+.mono {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.expList {
+  display: flex;
+  flex-direction: column;
+}
+
+.expItem {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.expItem:first-child {
+  border-top: 0.5px solid var(--border);
+}
+
+.expCompany {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.expPeriod {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.expRole {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.expDesc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5px;
+  background: var(--border);
+  border: 0.5px solid var(--border);
+}
+
+.projectCard {
+  background: var(--bg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: inherit;
+  transition: background 0.2s;
+}
+
+a.projectCard:hover,
+a.projectCard:focus-visible {
+  background: var(--bg-hover);
+  outline: none;
+}
+
+.featured {
+  grid-column: 1 / -1;
+}
+
+.projectTag {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.projectName {
+  font-family: var(--font-serif), serif;
+  font-size: 20px;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+.projectDesc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.projectTech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.techPill {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  color: var(--text-faint);
+  border: 0.5px solid var(--border);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 800px) {
+  .page {
+    padding: 3rem 1.5rem;
+  }
+
+  .expItem {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}
