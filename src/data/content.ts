@@ -88,11 +88,11 @@ export const projects: Project[] = [
     url: 'https://github.com/bradleypaul/redditp-react',
   },
   {
-    tag: 'CLI',
+    tag: 'Tool',
     name: 'jira-bot',
     description:
-      'Rust CLI for the Jira REST API: whoami, issue, comments, JQL search, and project listing. JSON output and a small library API so it can be used from other tools.',
-    tech: ['Rust', 'Jira API'],
+      'Python client for the Jira Cloud REST API. When you move an assigned ticket to In Progress, a Linux watcher clones the linked GitHub repo and checks out a branch. Also reads issues, comments, and JQL, and can ask Claude for an implementation plan.',
+    tech: ['Python', 'Jira API'],
     url: 'https://github.com/bradleypaul/jira-bot',
   },
   {
