@@ -9,6 +9,13 @@ export function ResumeView() {
         <span className={styles.mono}>
           {meta.title} · {meta.location}
         </span>
+        <a
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH}/resume.docx`}
+          download={`${meta.name.replace(/ /g, '-')}-Resume.docx`}
+          className={styles.download}
+        >
+          Download .docx
+        </a>
       </div>
 
       <div className={styles.expList}>
