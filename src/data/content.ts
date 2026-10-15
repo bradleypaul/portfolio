@@ -29,7 +29,7 @@ export const roles: Role[] = [
     period: '2025 – Present',
     title: 'Senior Full Stack Engineer',
     description:
-      'Pre-seed restaurant management and ordering platform. Partner with the CEO on frontend architecture, data modeling, and product direction. Designed and operate an AI/LLM pipeline that takes a Jira ticket through implementation, tests, and a PR.',
+      'Pre-seed restaurant management and ordering platform. Partner with the CEO on frontend architecture, data modeling, and product direction.',
   },
   {
     company: 'Zoro Tools',
@@ -155,7 +155,7 @@ export const alsoStack: StackItem[] = [
 
 export const aboutParagraphs: string[] = [
   `I'm a senior fullstack / product engineer with ${meta.yearsExperience} years of experience — deep React and TypeScript, plus a product-owner mindset. I've shipped at early-stage startups and large platforms (Amazon, NCR), and I work best when I can own architecture through delivery.`,
-  'At TapTab I designed and operate an AI/LLM pipeline that takes a Jira ticket through implementation, tests, and a PR, so most of the remaining work is writing the ticket and reviewing the change. I like typed UI, predictable state, and systems that fail in obvious ways.',
+  `On the side I'm building jira-bot, an open-source agent that takes a Jira ticket through implementation and tests to a draft PR, so the human work is writing the ticket and reviewing the change. I like typed UI, predictable state, and systems that fail in obvious ways.`,
   `Outside of engineering I'm interested in food science — dry aging, fermentation, charcuterie — electrical systems, and a long reading list that doesn't get shorter. Currently based in Austin, open to remote roles. ${meta.education}.`,
 ]
 

@@ -15,7 +15,8 @@ export function HomeView() {
           <p className={styles.desc}>
             {meta.yearsExperience} years across startups and large platforms —
             React, TypeScript, GraphQL, Node, GCP. I own architecture through
-            delivery, and lately an AI pipeline that takes a ticket to a PR.
+            delivery, and I&apos;m building an agent that takes a Jira ticket to
+            a tested PR.
           </p>
           <div className={styles.cta}>
             <Link href="/work" className={styles.btnPrimary}>
