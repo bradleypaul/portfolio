@@ -46,6 +46,57 @@ button {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.page-enter {
-  animation: fadeUp 0.25s ease forwards;
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 20;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 500;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  :root {
+    --bg: #fff;
+    --bg-hover: #fff;
+    --border: #ccc;
+    --text-primary: #000;
+    --text-secondary: #222;
+    --text-muted: #333;
+    --text-faint: #555;
+    --accent: #000;
+  }
+
+  nav, footer, .skip-link {
+    display: none !important;
+  }
+
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
 }

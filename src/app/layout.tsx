@@ -50,6 +50,17 @@ export const metadata: Metadata = {
   },
 }
 
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: meta.name,
+  jobTitle: meta.title,
+  url: siteUrl,
+  email: `mailto:${meta.email}`,
+  address: { '@type': 'PostalAddress', addressLocality: meta.location },
+  sameAs: [`https://${meta.github}`],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,6 +69,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${serif.variable} ${mono.variable} ${sans.variable}`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <div
           style={{
             minHeight: '100vh',
@@ -65,8 +80,13 @@ export default function RootLayout({
             flexDirection: 'column',
           }}
         >
+          <a href="#main" className="skip-link">
+            Skip to content
+          </a>
           <Nav />
-          <main style={{ flex: 1 }}>{children}</main>
+          <main id="main" style={{ flex: 1 }}>
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

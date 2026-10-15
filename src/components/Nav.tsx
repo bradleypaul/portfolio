@@ -9,11 +9,13 @@ const links = [
   { href: '/work', label: 'Work' },
   { href: '/stack', label: 'Stack' },
   { href: '/about', label: 'About' },
+  { href: '/resume', label: 'Resume' },
   { href: '/contact', label: 'Contact' },
 ] as const
 
 export function Nav() {
-  const pathname = usePathname()
+  // trailingSlash: true makes this '/work/', so strip it before comparing.
+  const pathname = (usePathname() ?? '').replace(/(.)\/$/, '$1')
 
   return (
     <nav className={styles.nav}>
@@ -27,6 +29,7 @@ export function Nav() {
             <li key={href}>
               <Link
                 href={href}
+                aria-current={isActive ? 'page' : undefined}
                 className={isActive ? `${styles.link} ${styles.active}` : styles.link}
               >
                 {label}

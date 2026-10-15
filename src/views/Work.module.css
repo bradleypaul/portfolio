@@ -105,7 +105,10 @@
 a.projectCard:hover,
 a.projectCard:focus-visible {
   background: var(--bg-hover);
-  outline: none;
+}
+
+a.projectCard:focus-visible {
+  outline-offset: -2px;
 }
 
 .featured {
