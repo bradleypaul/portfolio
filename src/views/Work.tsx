@@ -15,10 +15,15 @@ export function WorkView() {
             <div className={styles.expMeta}>
               <div className={styles.expCompany}>{role.company}</div>
               <div className={styles.expPeriod}>{role.period}</div>
+              <div className={styles.expPeriod}>{role.location}</div>
             </div>
             <div>
               <div className={styles.expRole}>{role.title}</div>
-              <div className={styles.expDesc}>{role.description}</div>
+              <ul className={styles.expHighlights}>
+                {role.highlights.map((highlight) => (
+                  <li key={highlight.slice(0, 32)}>{highlight}</li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}

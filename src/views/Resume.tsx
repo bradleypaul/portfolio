@@ -9,13 +9,22 @@ export function ResumeView() {
         <span className={styles.mono}>
           {meta.title} · {meta.location}
         </span>
-        <a
-          href={`${process.env.NEXT_PUBLIC_BASE_PATH}/resume.docx`}
-          download={`${meta.name.replace(/ /g, '-')}-Resume.docx`}
-          className={styles.download}
-        >
-          Download .docx
-        </a>
+        <div className={styles.downloads}>
+          <a
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH}/resume.pdf`}
+            download={`${meta.name.replace(/ /g, '-')}-Resume.pdf`}
+            className={styles.download}
+          >
+            Download PDF
+          </a>
+          <a
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH}/resume.docx`}
+            download={`${meta.name.replace(/ /g, '-')}-Resume.docx`}
+            className={styles.download}
+          >
+            Download .docx
+          </a>
+        </div>
       </div>
 
       <div className={styles.expList}>
@@ -34,10 +43,15 @@ export function ResumeView() {
             <div className={styles.expMeta}>
               <div className={styles.expCompany}>{role.company}</div>
               <div className={styles.expPeriod}>{role.period}</div>
+              <div className={styles.expPeriod}>{role.location}</div>
             </div>
             <div>
               <div className={styles.expRole}>{role.title}</div>
-              <div className={styles.expDesc}>{role.description}</div>
+              <ul className={styles.expHighlights}>
+                {role.highlights.map((highlight) => (
+                  <li key={highlight.slice(0, 32)}>{highlight}</li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}

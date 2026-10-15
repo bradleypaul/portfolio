@@ -33,3 +33,5 @@ For a Vercel deploy, leave `GITHUB_PAGES` unset so there is no base path.
 ## Content
 
 Edit `src/data/content.ts` for name, roles, projects, stack, about, and contact links.
+
+The downloadable resume is `public/resume.docx` and `public/resume.pdf`. The roles in `content.ts` are copied from it, so update both together.
