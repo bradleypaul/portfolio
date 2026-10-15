@@ -3,7 +3,7 @@ import { ContactView } from '@/views/Contact'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch — email, GitHub, LinkedIn.',
+  description: 'Get in touch — email or GitHub.',
 }
 
 export default function ContactPage() {

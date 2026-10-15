@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { DM_Mono, DM_Serif_Display, Outfit } from 'next/font/google'
 import { Footer } from '@/components/Footer'
 import { Nav } from '@/components/Nav'
-import { meta } from '@/data/content'
+import { meta, siteDescription, siteUrl } from '@/data/content'
 import '@/styles/global.css'
 
 const serif = DM_Serif_Display({
@@ -23,15 +23,30 @@ const sans = Outfit({
   variable: '--font-sans',
 })
 
+const ogImage = {
+  url: '/og.png',
+  width: 1200,
+  height: 630,
+  alt: `${meta.name} — ${meta.title}`,
+}
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${meta.name} — ${meta.title}`,
     template: `%s — ${meta.name}`,
   },
-  description: meta.tagline,
+  description: siteDescription,
   openGraph: {
     title: `${meta.name} — ${meta.title}`,
-    description: meta.tagline,
+    description: siteDescription,
+    siteName: meta.name,
+    type: 'website',
+    images: [ogImage],
+  },
+  twitter: { card: 'summary_large_image', images: [ogImage] },
+  icons: {
+    icon: { url: `${process.env.NEXT_PUBLIC_BASE_PATH}/favicon.png`, type: 'image/png' },
   },
 }
 
