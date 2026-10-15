@@ -79,29 +79,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    tag: 'Open source',
-    name: 'redditp-react',
-    featured: true,
-    description:
-      'Fullscreen Reddit slideshow in the spirit of redditp. Multi-subreddit routes, image and video (including Reddit-hosted, YouTube, and RedGifs), preload, and an NSFW preference that survives refresh. Vite proxy in dev; Netlify rewrite rules for production.',
-    tech: ['React', 'Vite', 'MUI', 'React Router'],
-    url: 'https://github.com/bradleypaul/redditp-react',
-  },
-  {
     tag: 'Tool',
     name: 'jira-bot',
+    featured: true,
     description:
       'Python client for the Jira Cloud REST API. When you move an assigned ticket to In Progress, a Linux watcher clones the linked GitHub repo and checks out a branch. Also reads issues, comments, and JQL, and can ask Claude for an implementation plan.',
     tech: ['Python', 'Jira API'],
     url: 'https://github.com/bradleypaul/jira-bot',
-  },
-  {
-    tag: 'Tool',
-    name: 'teams-hdmi-watcher',
-    description:
-      'Python utility for Apple Silicon: watch a USB HDMI capture and fire macOS notifications when motion appears in a corner ROI — useful for Teams toasts on a capture feed.',
-    tech: ['Python', 'OpenCV', 'macOS'],
-    url: 'https://github.com/bradleypaul/teams-hdmi-watcher',
   },
   {
     tag: 'UI',
@@ -118,6 +102,22 @@ export const projects: Project[] = [
       'MUI billing card composed from Card primitives and React context instead of prop drilling. Keyboard-submittable, with a write-up of tradeoffs and where AI helped.',
     tech: ['React', 'TypeScript', 'MUI'],
     url: 'https://github.com/bradleypaul/plan-selection-card',
+  },
+  {
+    tag: 'Open source',
+    name: 'redditp-react',
+    description:
+      'Fullscreen image and video viewer for Reddit in the spirit of redditp. Multi-subreddit routes, Reddit-hosted and YouTube media, and preloading so the next slide is ready. Vite proxy in dev; Netlify rewrite rules for production.',
+    tech: ['React', 'Vite', 'MUI', 'React Router'],
+    url: 'https://github.com/bradleypaul/redditp-react',
+  },
+  {
+    tag: 'Tool',
+    name: 'teams-hdmi-watcher',
+    description:
+      'Python utility for Apple Silicon: watch a USB HDMI capture and fire macOS notifications when motion appears in a corner ROI — useful for Teams toasts on a capture feed.',
+    tech: ['Python', 'OpenCV', 'macOS'],
+    url: 'https://github.com/bradleypaul/teams-hdmi-watcher',
   },
 ]
 
